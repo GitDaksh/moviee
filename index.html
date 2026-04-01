@@ -1,53 +1,135 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Movie Recommender</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineMatch — Find Your Film</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<div class="container">
+  <!-- Ambient background -->
+  <div class="bg-ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grain"></div>
+  </div>
 
-<h1 class="title">🎬 Movie Recommender</h1>
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Cine<em>Match</em></span>
+      </div>
+      <nav class="header-nav">
+        <a href="#" class="nav-link active">Discover</a>
+        <a href="#" class="nav-link">Top Rated</a>
+        <a href="#" class="nav-link">Watchlist</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="search-container">
-<input type="text" id="search" placeholder="Search movies...">
-</div>
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <p class="hero-eyebrow">Your personal film curator</p>
+    <h1 class="hero-title">
+      Find the film<br />
+      <em>made for tonight.</em>
+    </h1>
+    <p class="hero-sub">Filter by mood, genre, or let fate decide.</p>
 
-<div class="filters">
+    <!-- Search -->
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search" placeholder="Search a title…" autocomplete="off" />
+      <button class="search-clear" id="searchClear" aria-label="Clear">✕</button>
+    </div>
+  </section>
 
-<button class="filter-btn" data-mood="all">All</button> <button class="filter-btn" data-mood="happy">Happy</button> <button class="filter-btn" data-mood="sad">Sad</button> <button class="filter-btn" data-mood="motivational">Motivational</button> <button class="filter-btn" data-mood="thoughtful">Thoughtful</button>
+  <!-- ── CONTROLS ── -->
+  <section class="controls-section">
+    <div class="controls-inner">
 
-</div>
+      <!-- Mood filter -->
+      <div class="filter-group">
+        <span class="filter-label">Mood</span>
+        <div class="pill-row" id="moodFilters">
+          <button class="pill active" data-mood="all">All</button>
+          <button class="pill" data-mood="happy">😄 Happy</button>
+          <button class="pill" data-mood="sad">😢 Sad</button>
+          <button class="pill" data-mood="motivational">🔥 Motivated</button>
+          <button class="pill" data-mood="thoughtful">🤔 Thoughtful</button>
+        </div>
+      </div>
 
-<div class="filters">
+      <!-- Genre filter -->
+      <div class="filter-group">
+        <span class="filter-label">Genre</span>
+        <div class="pill-row" id="genreFilters">
+          <button class="pill active" data-genre="all">All</button>
+          <button class="pill" data-genre="action">Action</button>
+          <button class="pill" data-genre="drama">Drama</button>
+          <button class="pill" data-genre="sci-fi">Sci-Fi</button>
+          <button class="pill" data-genre="crime">Crime</button>
+          <button class="pill" data-genre="thriller">Thriller</button>
+          <button class="pill" data-genre="romance">Romance</button>
+          <button class="pill" data-genre="comedy">Comedy</button>
+        </div>
+      </div>
 
-<button class="genre-btn" data-genre="all">All Genres</button> <button class="genre-btn" data-genre="action">Action</button> <button class="genre-btn" data-genre="drama">Drama</button> <button class="genre-btn" data-genre="sci-fi">Sci-Fi</button> <button class="genre-btn" data-genre="romance">Romance</button>
+      <!-- Sort + Random -->
+      <div class="filter-group filter-group--row">
+        <div class="sort-wrap">
+          <span class="filter-label">Sort</span>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Default</option>
+            <option value="year-desc">Newest First</option>
+            <option value="year-asc">Oldest First</option>
+            <option value="title-asc">A → Z</option>
+          </select>
+        </div>
+        <button id="randomBtn" class="btn-random">
+          <span class="dice">🎲</span> Surprise Me
+        </button>
+      </div>
 
-</div>
+    </div>
+  </section>
 
-<button id="randomBtn">🎲 Surprise Me</button>
+  <!-- ── RESULTS BAR ── -->
+  <div class="results-bar">
+    <span id="resultsCount" class="results-count">— films</span>
+    <button id="clearFilters" class="btn-clear-filters">Clear all filters</button>
+  </div>
 
-<div class="movies-container" id="moviesContainer"></div>
+  <!-- ── MOVIE GRID ── -->
+  <main class="movies-container" id="moviesContainer"></main>
 
-</div>
+  <!-- ── EMPTY STATE ── -->
+  <div class="empty-state" id="emptyState" hidden>
+    <div class="empty-icon">🎞️</div>
+    <h3>No films found</h3>
+    <p>Try adjusting your filters or search term.</p>
+  </div>
 
-<!-- Modal -->
+  <!-- ── MODAL ── -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-box" id="modalContent">
+      <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
 
-<div class="modal" id="modal">
-<div class="modal-content" id="modalContent">
-<span class="close" id="closeModal">&times;</span>
-<div id="modalBody"></div>
-</div>
-</div>
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast"></div>
 
-<script src="movies.js"></script>
-
-<script src="script.js"></script>
-
+  <script src="movies.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

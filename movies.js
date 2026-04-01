@@ -1,331 +1,154 @@
 const movies = [
 
 /* ==================== SCI-FI ==================== */
-
-{
-title: "Interstellar",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2014,
-poster: "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
-description: "A team travels through a wormhole in space."
-},
-
-{
-title: "Inception",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2010,
-poster: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
-description: "Dreams inside dreams."
-},
-
-{
-title: "The Matrix",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 1999,
-poster: "https://image.tmdb.org/t/p/w500/aOIuZAjPaRIE6CMzbazvcHuHXDc.jpg",
-description: "Reality is a simulation."
-},
-
-{
-title: "Blade Runner 2049",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2017,
-poster: "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
-description: "Futuristic mystery."
-},
-
-{
-title: "Arrival",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2016,
-poster: "https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg",
-description: "Aliens arrive."
-},
-
-{
-title: "Dune",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2021,
-poster: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-description: "Desert planet saga."
-},
-
-{
-title: "Dune Part Two",
-mood: "motivational",
-genre: "sci-fi",
-year: 2024,
-poster: "https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
-description: "Epic continuation."
-},
-
-{
-title: "Tenet",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2020,
-poster: "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
-description: "Time inversion thriller."
-},
-
-{
-title: "Annihilation",
-mood: "thoughtful",
-genre: "sci-fi",
-year: 2018,
-poster: "https://image.tmdb.org/t/p/w500/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
-description: "Sci-fi mystery."
-},
+{ title: "Interstellar", mood: "thoughtful", genre: "sci-fi", year: 2014, poster: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg", description: "A dying Earth forces a crew through a wormhole to find humanity's new home across space and time." },
+{ title: "Inception", mood: "thoughtful", genre: "sci-fi", year: 2010, poster: "https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg", description: "A thief who enters people's dreams to steal secrets is given a chance to have his crime erased." },
+{ title: "The Matrix", mood: "thoughtful", genre: "sci-fi", year: 1999, poster: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg", description: "A computer hacker discovers the world he lives in is a simulated reality." },
+{ title: "Blade Runner 2049", mood: "thoughtful", genre: "sci-fi", year: 2017, poster: "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg", description: "A young blade runner's discovery of a long-buried secret leads him to find Rick Deckard." },
+{ title: "Arrival", mood: "thoughtful", genre: "sci-fi", year: 2016, poster: "https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg", description: "A linguist works to communicate with alien lifeforms after they arrive on Earth." },
+{ title: "Dune", mood: "thoughtful", genre: "sci-fi", year: 2021, poster: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg", description: "Paul Atreides journeys to the most dangerous planet in the universe to secure its future." },
+{ title: "Dune: Part Two", mood: "motivational", genre: "sci-fi", year: 2024, poster: "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg", description: "Paul Atreides unites with the Fremen to wage war against the conspirators who destroyed his family." },
+{ title: "Tenet", mood: "thoughtful", genre: "sci-fi", year: 2020, poster: "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg", description: "A secret agent embarks on a time-bending mission to prevent World War III." },
+{ title: "Moon", mood: "sad", genre: "sci-fi", year: 2009, poster: "https://image.tmdb.org/t/p/w500/1YQCv4LETX5LPjmDzVRsmhfYRPB.jpg", description: "Astronaut Sam Bell has a personal encounter near the end of his solo mission on the Moon." },
+{ title: "Ex Machina", mood: "thoughtful", genre: "sci-fi", year: 2014, poster: "https://image.tmdb.org/t/p/w500/btdCQKqtB9pGDxfU1xBxmABhWCU.jpg", description: "A coder is invited to administer the Turing test to an AI with a beautiful humanoid body." },
+{ title: "Gravity", mood: "motivational", genre: "sci-fi", year: 2013, poster: "https://image.tmdb.org/t/p/w500/pBzFkPuNOHgRlR1BMFKr8R18wNi.jpg", description: "Two astronauts work together to survive after an accident leaves them stranded in space." },
+{ title: "The Martian", mood: "motivational", genre: "sci-fi", year: 2015, poster: "https://image.tmdb.org/t/p/w500/5aGhaIHYuQbqlHWvWYqMCnj40y2.jpg", description: "An astronaut stranded on Mars must use science and ingenuity to survive alone." },
+{ title: "Minority Report", mood: "thoughtful", genre: "sci-fi", year: 2002, poster: "https://image.tmdb.org/t/p/w500/fQJOFgE4hLDeqYzFbpOiHHBCbAd.jpg", description: "In a future where cops arrest murderers before the crime, one officer goes on the run." },
+{ title: "District 9", mood: "thoughtful", genre: "sci-fi", year: 2009, poster: "https://image.tmdb.org/t/p/w500/tFdpbxHjrMaCfyaChYgByjMlQDg.jpg", description: "An extraterrestrial race forced into slum-like conditions on Earth finds an unlikely ally." },
+{ title: "Looper", mood: "thoughtful", genre: "sci-fi", year: 2012, poster: "https://image.tmdb.org/t/p/w500/dkOKQCvHEX43p2p0cGVXEJLN7Ek.jpg", description: "In 2074, the mob sends targets back in time to be killed by waiting assassins called Loopers." },
+{ title: "Contact", mood: "thoughtful", genre: "sci-fi", year: 1997, poster: "https://image.tmdb.org/t/p/w500/6YHxoijNORLkHLHMFJFvEhfEXaP.jpg", description: "Dr. Ellie Arroway finds evidence of extraterrestrial life and fights to be sent on first contact." },
+{ title: "Coherence", mood: "thoughtful", genre: "sci-fi", year: 2013, poster: "https://image.tmdb.org/t/p/w500/9bnkJTjMFC8cOA5gq0DrXBBObdQ.jpg", description: "Strange things happen to a group of friends on the night of a comet passing overhead." },
+{ title: "Annihilation", mood: "thoughtful", genre: "sci-fi", year: 2018, poster: "https://image.tmdb.org/t/p/w500/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg", description: "A biologist signs up for a dangerous expedition into an environmental disaster zone full of mysteries." },
 
 /* ==================== DRAMA ==================== */
-
-{
-title: "Good Will Hunting",
-mood: "motivational",
-genre: "drama",
-year: 1997,
-poster: "https://image.tmdb.org/t/p/w500/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
-description: "A genius janitor."
-},
-
-{
-title: "The Shawshank Redemption",
-mood: "motivational",
-genre: "drama",
-year: 1994,
-poster: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
-description: "Hope and friendship."
-},
-
-{
-title: "Forrest Gump",
-mood: "happy",
-genre: "drama",
-year: 1994,
-poster: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
-description: "Life journey."
-},
-
-{
-title: "Whiplash",
-mood: "motivational",
-genre: "drama",
-year: 2014,
-poster: "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
-description: "Drummer pushed to greatness."
-},
-
-{
-title: "The Social Network",
-mood: "motivational",
-genre: "drama",
-year: 2010,
-poster: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
-description: "Facebook story."
-},
-
-{
-title: "The Pursuit of Happyness",
-mood: "motivational",
-genre: "drama",
-year: 2006,
-poster: "https://image.tmdb.org/t/p/w500/oyG9TL7FcRP4EZ9Vid6uKzwdndz.jpg",
-description: "Struggling salesman."
-},
-
-{
-title: "A Beautiful Mind",
-mood: "motivational",
-genre: "drama",
-year: 2001,
-poster: "https://image.tmdb.org/t/p/w500/zwzWCmH72OSC9NA0ipoqw5Zjya8.jpg",
-description: "Math genius story."
-},
-
-{
-title: "The Green Mile",
-mood: "sad",
-genre: "drama",
-year: 1999,
-poster: "https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
-description: "Prison story."
-},
-
-{
-title: "The Pianist",
-mood: "sad",
-genre: "drama",
-year: 2002,
-poster: "https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
-description: "War survival."
-},
-
-{
-title: "Her",
-mood: "sad",
-genre: "romance",
-year: 2013,
-poster: "https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
-description: "AI love story."
-},
+{ title: "The Shawshank Redemption", mood: "motivational", genre: "drama", year: 1994, poster: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg", description: "Two imprisoned men bond over years, finding solace and eventual redemption through acts of kindness." },
+{ title: "Good Will Hunting", mood: "motivational", genre: "drama", year: 1997, poster: "https://image.tmdb.org/t/p/w500/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg", description: "A janitor at MIT has a genius-level IQ but a troubled past. A therapist helps him find direction." },
+{ title: "Forrest Gump", mood: "happy", genre: "drama", year: 1994, poster: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg", description: "The life journey of a kind-hearted man from Alabama through pivotal moments in history." },
+{ title: "Whiplash", mood: "motivational", genre: "drama", year: 2014, poster: "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg", description: "A young jazz drummer at a conservatory is pushed to his absolute limits by an abusive instructor." },
+{ title: "The Social Network", mood: "motivational", genre: "drama", year: 2010, poster: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg", description: "The story of Facebook's creation and the legal battles that followed its meteoric rise." },
+{ title: "The Pursuit of Happyness", mood: "motivational", genre: "drama", year: 2006, poster: "https://image.tmdb.org/t/p/w500/oyG9TL7FcRP4EZ9Vid6uKzwdndz.jpg", description: "A struggling salesman takes custody of his son while poised to begin a life-changing career opportunity." },
+{ title: "A Beautiful Mind", mood: "motivational", genre: "drama", year: 2001, poster: "https://image.tmdb.org/t/p/w500/zwzWCmH72OSC9NA0ipoqw5Zjya8.jpg", description: "A brilliant mathematician accepts secret work in cryptography, leading to unexpected trouble." },
+{ title: "The Green Mile", mood: "sad", genre: "drama", year: 1999, poster: "https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNEU8YmIo52R.jpg", description: "The lives of guards on Death Row are changed by the arrival of an unusual new inmate." },
+{ title: "The Pianist", mood: "sad", genre: "drama", year: 2002, poster: "https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg", description: "A Polish-Jewish musician struggles to survive the destruction of the Warsaw ghetto in WWII." },
+{ title: "Parasite", mood: "thoughtful", genre: "drama", year: 2019, poster: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg", description: "Greed and class discrimination threaten the bond between the wealthy Parks and the poor Kims." },
+{ title: "Oppenheimer", mood: "thoughtful", genre: "drama", year: 2023, poster: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg", description: "The story of J. Robert Oppenheimer and the development of the atomic bomb during WWII." },
+{ title: "Joker", mood: "sad", genre: "drama", year: 2019, poster: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg", description: "A troubled comedian's descent into madness and the birth of an iconic villain." },
+{ title: "Fight Club", mood: "thoughtful", genre: "drama", year: 1999, poster: "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg", description: "An insomniac and a soap salesman build a network of underground fight clubs that spirals dangerously." },
+{ title: "The Wolf of Wall Street", mood: "happy", genre: "drama", year: 2013, poster: "https://image.tmdb.org/t/p/w500/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg", description: "A New York stockbroker refuses to cooperate in a securities fraud case involving massive corruption." },
+{ title: "Manchester by the Sea", mood: "sad", genre: "drama", year: 2016, poster: "https://image.tmdb.org/t/p/w500/o1NHajGHGNdSBJqCPBRMFJ6bkN8.jpg", description: "A man is forced to return to his hometown to care for his nephew after his brother dies." },
+{ title: "Marriage Story", mood: "sad", genre: "drama", year: 2019, poster: "https://image.tmdb.org/t/p/w500/pZekG6xabTmZxjmYw10v9t2VzCR.jpg", description: "A stage director and his actor wife struggle through a coast-to-coast divorce." },
+{ title: "Boyhood", mood: "thoughtful", genre: "drama", year: 2014, poster: "https://image.tmdb.org/t/p/w500/8mmS4JOSxdaB6ItZZ7ypFbFAB6h.jpg", description: "The story of a boy growing up from age six to eighteen, filmed over twelve actual years." },
+{ title: "Schindler's List", mood: "sad", genre: "drama", year: 1993, poster: "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg", description: "In WWII-occupied Poland, Oskar Schindler gradually becomes concerned for his Jewish workforce." },
+{ title: "American History X", mood: "thoughtful", genre: "drama", year: 1998, poster: "https://image.tmdb.org/t/p/w500/rqOtZCfM5pn2SUmgHFH4dPFmXBm.jpg", description: "A former neo-nazi tries to prevent his younger brother from going down the same destructive path." },
+{ title: "Into the Wild", mood: "thoughtful", genre: "drama", year: 2007, poster: "https://image.tmdb.org/t/p/w500/bBtCPBOiDyFLkRjHioGiETuiIdQ.jpg", description: "After graduating college, Christopher McCandless abandons everything and hitchhikes to Alaska." },
+{ title: "12 Years a Slave", mood: "sad", genre: "drama", year: 2013, poster: "https://image.tmdb.org/t/p/w500/xdHbA98aXhOlQoFRLs2ZVYF0PBX.jpg", description: "A free Black man is kidnapped and sold into slavery in the antebellum United States." },
+{ title: "Her", mood: "sad", genre: "romance", year: 2013, poster: "https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg", description: "A lonely writer develops an unlikely relationship with an operating system's AI." },
 
 /* ==================== CRIME ==================== */
+{ title: "The Godfather", mood: "thoughtful", genre: "crime", year: 1972, poster: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg", description: "The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son." },
+{ title: "The Godfather Part II", mood: "thoughtful", genre: "crime", year: 1974, poster: "https://image.tmdb.org/t/p/w500/amvmeQWheahG3StKwIE1f7jRnkZ.jpg", description: "The early life of Vito Corleone and the story of Michael's rise and consolidation of power." },
+{ title: "Pulp Fiction", mood: "thoughtful", genre: "crime", year: 1994, poster: "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg", description: "The lives of two mob hitmen, a boxer, and a gangster's wife intertwine in four tales of violence." },
+{ title: "Se7en", mood: "sad", genre: "crime", year: 1995, poster: "https://image.tmdb.org/t/p/w500/69Sns8WoET6CfaYlIkHbla4l7nC.jpg", description: "Two detectives hunt a serial killer using the seven deadly sins as his calling card." },
+{ title: "Goodfellas", mood: "thoughtful", genre: "crime", year: 1990, poster: "https://image.tmdb.org/t/p/w500/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg", description: "The story of Henry Hill and his life in the mob from age 13 through his eventual downfall." },
+{ title: "The Departed", mood: "thoughtful", genre: "crime", year: 2006, poster: "https://image.tmdb.org/t/p/w500/rB0zniQalHZqBo3GFbfgE2sPVnI.jpg", description: "An undercover cop and a mole in the police attempt to identify each other while both sides close in." },
+{ title: "No Country for Old Men", mood: "thoughtful", genre: "crime", year: 2007, poster: "https://image.tmdb.org/t/p/w500/6d1msKNOzpMhbEIJMfcUmNxQYFD.jpg", description: "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and two million dollars." },
+{ title: "Heat", mood: "thoughtful", genre: "crime", year: 1995, poster: "https://image.tmdb.org/t/p/w500/umOBTrb72iOrIk6hydxJ5rpeadG.jpg", description: "A master thief and a dedicated detective face off in a cat-and-mouse game across Los Angeles." },
+{ title: "Sicario", mood: "thoughtful", genre: "crime", year: 2015, poster: "https://image.tmdb.org/t/p/w500/ywmMDqmCpEqoZPXcxKCTsRYqOPq.jpg", description: "An FBI agent is enlisted to battle drug trafficking on the US-Mexico border." },
+{ title: "City of God", mood: "thoughtful", genre: "crime", year: 2002, poster: "https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB2A2Xu2grZ.jpg", description: "In the slums of Rio, two kids take different paths — one towards crime, one towards photography." },
+{ title: "Zodiac", mood: "thoughtful", genre: "crime", year: 2007, poster: "https://image.tmdb.org/t/p/w500/qOdP4UKbW2RKdMGLpVaRFGVMGR4.jpg", description: "A cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer." },
 
-{
-title: "The Godfather",
-mood: "thoughtful",
-genre: "crime",
-year: 1972,
-poster: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-description: "Mafia classic."
-},
-
-{
-title: "The Godfather Part II",
-mood: "thoughtful",
-genre: "crime",
-year: 1974,
-poster: "https://image.tmdb.org/t/p/w500/amvmeQWheahG3StKwIE1f7jRnkZ.jpg",
-description: "Mafia sequel."
-},
-
-{
-title: "Pulp Fiction",
-mood: "thoughtful",
-genre: "crime",
-year: 1994,
-poster: "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-description: "Crime anthology."
-},
-
-{
-title: "Se7en",
-mood: "sad",
-genre: "crime",
-year: 1995,
-poster: "https://image.tmdb.org/t/p/w500/69Sns8WoET6CfaYlIkHbla4l7nC.jpg",
-description: "Serial killer mystery."
-},
-
-{
-title: "Prisoners",
-mood: "sad",
-genre: "thriller",
-year: 2013,
-poster: "https://image.tmdb.org/t/p/w500/uhviyknTT5cEQXbn6vWIqfM4vGm.jpg",
-description: "Kidnapping mystery."
-},
-
-{
-title: "Shutter Island",
-mood: "thoughtful",
-genre: "thriller",
-year: 2010,
-poster: "https://image.tmdb.org/t/p/w500/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
-description: "Psychological mystery."
-},
+/* ==================== THRILLER ==================== */
+{ title: "Gone Girl", mood: "thoughtful", genre: "thriller", year: 2014, poster: "https://image.tmdb.org/t/p/w500/2kmDNFQPGBMvH9cO5sCbjKEfx0A.jpg", description: "On the morning of their fifth anniversary, Nick Dunne's wife disappears under mysterious circumstances." },
+{ title: "Get Out", mood: "thoughtful", genre: "thriller", year: 2017, poster: "https://image.tmdb.org/t/p/w500/qbaIWBXVRrFvPo0TJpk2vFJUMJT.jpg", description: "A Black man visits his white girlfriend's family estate and uncovers deeply disturbing secrets." },
+{ title: "Black Swan", mood: "thoughtful", genre: "thriller", year: 2010, poster: "https://image.tmdb.org/t/p/w500/wedPBSBOqCWCTpJaqUKkiCNIiKK.jpg", description: "A ballet dancer pushes herself to perfection while a rival threatens to upstage her." },
+{ title: "The Silence of the Lambs", mood: "thoughtful", genre: "thriller", year: 1991, poster: "https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg", description: "An FBI trainee enlists a manipulative cannibal killer to help catch a serial murderer." },
+{ title: "Prisoners", mood: "sad", genre: "thriller", year: 2013, poster: "https://image.tmdb.org/t/p/w500/uhviyknTT5cEQXbn6vWIqfM4vGm.jpg", description: "A desperate father takes matters into his own hands when his daughter vanishes without trace." },
+{ title: "Shutter Island", mood: "thoughtful", genre: "thriller", year: 2010, poster: "https://image.tmdb.org/t/p/w500/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg", description: "A US Marshal investigates the disappearance of a patient from a hospital for the criminally insane." },
+{ title: "Hereditary", mood: "thoughtful", genre: "thriller", year: 2018, poster: "https://image.tmdb.org/t/p/w500/nVRyd6KIAhCPPf7dpJEzC2FBsqp.jpg", description: "After their matriarch dies, a family is haunted by increasingly disturbing occurrences." },
+{ title: "Knives Out", mood: "happy", genre: "thriller", year: 2019, poster: "https://image.tmdb.org/t/p/w500/pThyQovXQrws2hmykfV46ZAgUnJ.jpg", description: "A detective investigates the death of a crime novelist at his estate with his dysfunctional family." },
+{ title: "Us", mood: "thoughtful", genre: "thriller", year: 2019, poster: "https://image.tmdb.org/t/p/w500/ux2maFpqzfkSCd0hWV5oGmFVEty.jpg", description: "A family's beach vacation turns to chaos when their terrifying doppelgängers appear." },
 
 /* ==================== ACTION ==================== */
+{ title: "The Dark Knight", mood: "thoughtful", genre: "action", year: 2008, poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg", description: "Batman battles the Joker, a criminal mastermind who wants to plunge Gotham City into anarchy." },
+{ title: "Gladiator", mood: "motivational", genre: "action", year: 2000, poster: "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg", description: "A Roman general becomes a slave who rises through the gladiator ranks to seek revenge." },
+{ title: "Mad Max: Fury Road", mood: "motivational", genre: "action", year: 2015, poster: "https://image.tmdb.org/t/p/w500/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg", description: "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in a high-speed chase." },
+{ title: "John Wick", mood: "motivational", genre: "action", year: 2014, poster: "https://image.tmdb.org/t/p/w500/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg", description: "An ex-assassin comes out of retirement to hunt down the gangsters that killed his puppy." },
+{ title: "John Wick: Chapter 2", mood: "motivational", genre: "action", year: 2017, poster: "https://image.tmdb.org/t/p/w500/hXWBc0ioZP3cN6zKVc95dpo3coY.jpg", description: "John Wick is forced to honor a blood oath and sets off on a new explosive mission in Rome." },
+{ title: "Top Gun: Maverick", mood: "motivational", genre: "action", year: 2022, poster: "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg", description: "After 30 years, Maverick is called back to train Top Gun graduates for a near-impossible mission." },
+{ title: "Mission: Impossible – Fallout", mood: "motivational", genre: "action", year: 2018, poster: "https://image.tmdb.org/t/p/w500/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg", description: "Ethan Hunt races against time after a failed mission threatens a massive nuclear attack." },
+{ title: "The Raid", mood: "motivational", genre: "action", year: 2011, poster: "https://image.tmdb.org/t/p/w500/y0SElLqaGa6LZKlLFxuMW5MGBF5.jpg", description: "A SWAT team becomes trapped in a tenement run by a ruthless drug lord and his army of killers." },
+{ title: "Baby Driver", mood: "happy", genre: "action", year: 2017, poster: "https://image.tmdb.org/t/p/w500/LC2AqPfnPJFY3gFhkrNvWCFWRG3.jpg", description: "A gifted getaway driver relies on music to drown out tinnitus and gets caught up in a crime spree." },
+{ title: "Casino Royale", mood: "motivational", genre: "action", year: 2006, poster: "https://image.tmdb.org/t/p/w500/1Wo6BBEG4HCL4dJhMlbD2AWL2fP.jpg", description: "James Bond earns his 00 status in a high-stakes poker game against a terrorist banker." },
+{ title: "The Bourne Identity", mood: "motivational", genre: "action", year: 2002, poster: "https://image.tmdb.org/t/p/w500/kmIQCnYoAhHHmDHl79TxJdFRFmK.jpg", description: "A man rescued from the ocean has no memory but extraordinary fighting skills and spies on his trail." },
+{ title: "Oldboy", mood: "thoughtful", genre: "action", year: 2003, poster: "https://image.tmdb.org/t/p/w500/pWDtjs568ZfOTMbURQBmHx9QKZQ.jpg", description: "A man imprisoned for 15 years without explanation is released and seeks answers." },
 
-{
-title: "The Dark Knight",
-mood: "thoughtful",
-genre: "action",
-year: 2008,
-poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-description: "Batman faces Joker."
-},
+/* ==================== COMEDY ==================== */
+{ title: "The Grand Budapest Hotel", mood: "happy", genre: "comedy", year: 2014, poster: "https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg", description: "A legendary concierge and his young employee have adventures in a famous European hotel between the wars." },
+{ title: "Superbad", mood: "happy", genre: "comedy", year: 2007, poster: "https://image.tmdb.org/t/p/w500/ynfSBxBDkgIm5N4JBTLqXlGzytX.jpg", description: "Two co-dependent high school seniors deal with separation anxiety on one last wild night together." },
+{ title: "The Big Lebowski", mood: "happy", genre: "comedy", year: 1998, poster: "https://image.tmdb.org/t/p/w500/pUStkplqIpnLumMYPiecusiBXoY.jpg", description: "A laid-back slacker is mistaken for a millionaire and pulled into a kidnapping caper." },
+{ title: "Groundhog Day", mood: "happy", genre: "comedy", year: 1993, poster: "https://image.tmdb.org/t/p/w500/tPU7XVTX9E3FRyCNlNIFqjkDhfU.jpg", description: "A weatherman finds himself inexplicably living the same day over and over again." },
+{ title: "The Truman Show", mood: "thoughtful", genre: "comedy", year: 1998, poster: "https://image.tmdb.org/t/p/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg", description: "An insurance salesman discovers his entire life is actually a televised reality show." },
+{ title: "In Bruges", mood: "sad", genre: "comedy", year: 2008, poster: "https://image.tmdb.org/t/p/w500/bJQz1qEfYiLZSBnMIldAlFXvJX3.jpg", description: "Two hitmen are sent to Bruges, Belgium after a job goes wrong, with conflicting orders." },
+{ title: "Office Space", mood: "happy", genre: "comedy", year: 1999, poster: "https://image.tmdb.org/t/p/w500/1Ijvn1e5s3yO0yyQOnbOgkSISQ.jpg", description: "Three disgruntled software employees decide to rebel against their soul-crushing boss." },
 
-{
-title: "Gladiator",
-mood: "motivational",
-genre: "action",
-year: 2000,
-poster: "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
-description: "Roman revenge story."
-},
+/* ==================== ROMANCE ==================== */
+{ title: "La La Land", mood: "happy", genre: "romance", year: 2016, poster: "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg", description: "A jazz musician and an aspiring actress fall in love while pursuing their Hollywood dreams." },
+{ title: "Eternal Sunshine of the Spotless Mind", mood: "sad", genre: "romance", year: 2004, poster: "https://image.tmdb.org/t/p/w500/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg", description: "A couple undergo a procedure to erase each other from their memories after a painful breakup." },
+{ title: "Before Sunrise", mood: "happy", genre: "romance", year: 1995, poster: "https://image.tmdb.org/t/p/w500/6vLMVvMrSpwISTDf4h8hNUaHXM0.jpg", description: "A young American and a French woman meet on a train and spend one magical night in Vienna." },
+{ title: "Before Sunset", mood: "thoughtful", genre: "romance", year: 2004, poster: "https://image.tmdb.org/t/p/w500/86oRBQUGfQnfqfFvWwEfmz0M03V.jpg", description: "Jesse and Céline reunite nine years after their first encounter during Jesse's book tour in Paris." },
+{ title: "Amélie", mood: "happy", genre: "romance", year: 2001, poster: "https://image.tmdb.org/t/p/w500/f7ORBrFCNhTFfnGjlEhMLb7CX8O.jpg", description: "A shy Parisian waitress decides to change the lives of those around her while struggling to find love." },
+{ title: "Call Me by Your Name", mood: "sad", genre: "romance", year: 2017, poster: "https://image.tmdb.org/t/p/w500/ljT8E6c2xBi6WGumqCGj55vmFGL.jpg", description: "A teenager is infatuated with the graduate student who comes to work for his family one summer." },
+{ title: "The Notebook", mood: "sad", genre: "romance", year: 2004, poster: "https://image.tmdb.org/t/p/w500/qom1SZSENdmHFNZBXbtLAGdGaSD.jpg", description: "A poor and passionate young man falls for a rich girl, but their love is complicated by class." },
+{ title: "Pride & Prejudice", mood: "happy", genre: "romance", year: 2005, poster: "https://image.tmdb.org/t/p/w500/bTaLIkSjBMxD4k3hfnfzKfXOu9W.jpg", description: "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy." },
 
-{
-title: "Mad Max Fury Road",
-mood: "motivational",
-genre: "action",
-year: 2015,
-poster: "https://image.tmdb.org/t/p/w500/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg",
-description: "High speed action."
-},
+/* ==================== ANIMATION ==================== */
+{ title: "Spirited Away", mood: "happy", genre: "animation", year: 2001, poster: "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg", description: "A sullen girl enters a world ruled by gods and spirits after her parents are transformed into pigs." },
+{ title: "Your Name", mood: "sad", genre: "animation", year: 2016, poster: "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg", description: "Two strangers find they are inexplicably connected via body-switching, then search for each other." },
+{ title: "Princess Mononoke", mood: "thoughtful", genre: "animation", year: 1997, poster: "https://image.tmdb.org/t/p/w500/3RxtLfGUfGBNO2Ec3SAKaLSRbSs.jpg", description: "A prince becomes involved in a struggle between forest gods and the humans who consume their resources." },
+{ title: "Grave of the Fireflies", mood: "sad", genre: "animation", year: 1988, poster: "https://image.tmdb.org/t/p/w500/k9tv1rXZbOhH7enmEZnKhCQkKDx.jpg", description: "A young boy and his little sister struggle to survive in Japan during World War II." },
+{ title: "WALL·E", mood: "happy", genre: "animation", year: 2008, poster: "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnYClntw.jpg", description: "A lonely waste-collecting robot falls in love with a sleek probe robot sent to survey Earth." },
+{ title: "Up", mood: "sad", genre: "animation", year: 2009, poster: "https://image.tmdb.org/t/p/w500/vpAaZe3tBKxU6UmZ4i0eBfhXxEb.jpg", description: "An elderly widower ties thousands of balloons to his house and flies to South America." },
+{ title: "The Lion King", mood: "motivational", genre: "animation", year: 1994, poster: "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg", description: "A lion cub flees his homeland after the murder of his father, later returning to reclaim it." },
+{ title: "Howl's Moving Castle", mood: "happy", genre: "animation", year: 2004, poster: "https://image.tmdb.org/t/p/w500/TkFBApxMsE8i09VJ94vrMbCGQkf.jpg", description: "A young woman cursed with an old body seeks the help of a wizard living in a travelling castle." },
 
-/* ==================== MORE GREAT MOVIES ==================== */
+/* ==================== ADVENTURE ==================== */
+{ title: "Raiders of the Lost Ark", mood: "happy", genre: "adventure", year: 1981, poster: "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg", description: "Archaeologist Indiana Jones races against the Nazis to find the legendary Ark of the Covenant." },
+{ title: "The Lord of the Rings: The Fellowship of the Ring", mood: "motivational", genre: "adventure", year: 2001, poster: "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg", description: "A hobbit and a fellowship embark on a journey to destroy the One Ring and save Middle-earth." },
+{ title: "The Lord of the Rings: The Return of the King", mood: "motivational", genre: "adventure", year: 2003, poster: "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg", description: "The final epic confrontation between the forces of good and evil for the fate of Middle-earth." },
+{ title: "The Princess Bride", mood: "happy", genre: "adventure", year: 1987, poster: "https://image.tmdb.org/t/p/w500/gpepFxKNjMfBsJt4Z7lT0sDVOyv.jpg", description: "A classic fairy tale with swordfights, pirates, monsters, a beautiful princess, and true love." },
+{ title: "Cast Away", mood: "sad", genre: "adventure", year: 2000, poster: "https://image.tmdb.org/t/p/w500/3gDhMZBHkHJNOUl2ZUAfkVPSqAW.jpg", description: "A FedEx employee becomes stranded on an uninhabited island after his plane crashes into the ocean." },
 
-{
-title: "The Grand Budapest Hotel",
-mood: "happy",
-genre: "comedy",
-year: 2014,
-poster: "https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
-description: "Stylish comedy."
-},
+/* ==================== HORROR ==================== */
+{ title: "The Shining", mood: "thoughtful", genre: "horror", year: 1980, poster: "https://image.tmdb.org/t/p/w500/nRj5511mZdTl4saWEPoj9QroTIu.jpg", description: "A family heads to an isolated hotel for the winter where a sinister presence influences the father." },
+{ title: "A Quiet Place", mood: "thoughtful", genre: "horror", year: 2018, poster: "https://image.tmdb.org/t/p/w500/nAU74GmpUk7t5iklEp3bufwDq4n.jpg", description: "A family struggles to survive in a world inhabited by creatures that hunt purely by sound." },
+{ title: "Midsommar", mood: "thoughtful", genre: "horror", year: 2019, poster: "https://image.tmdb.org/t/p/w500/7LEI8ulZzO5gy9Ww2NVCrKmHeDZ.jpg", description: "A couple travels to Sweden to visit a midsummer festival that takes a disturbing, violent turn." },
+{ title: "Hereditary", mood: "thoughtful", genre: "horror", year: 2018, poster: "https://image.tmdb.org/t/p/w500/nVRyd6KIAhCPPf7dpJEzC2FBsqp.jpg", description: "After their matriarch passes away, a family begins to unravel dark and terrifying secrets." },
+{ title: "The Witch", mood: "thoughtful", genre: "horror", year: 2015, poster: "https://image.tmdb.org/t/p/w500/jmVmCHdwSLsqGrP7a7WwmSLzijx.jpg", description: "A Puritan family encounters forces of evil in the New England wilderness." },
 
-{
-title: "The Wolf of Wall Street",
-mood: "happy",
-genre: "drama",
-year: 2013,
-poster: "https://image.tmdb.org/t/p/w500/pWHf4khOloNVfCxscsXFj3jj6gP.jpg",
-description: "Stock market madness."
-},
+/* ==================== BIOGRAPHY ==================== */
+{ title: "Bohemian Rhapsody", mood: "motivational", genre: "biography", year: 2018, poster: "https://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg", description: "The story of Freddie Mercury and Queen, leading up to their iconic 1985 Live Aid performance." },
+{ title: "The Theory of Everything", mood: "motivational", genre: "biography", year: 2014, poster: "https://image.tmdb.org/t/p/w500/4bgHEk6YVVT6YJeKUqHHbNKmkWp.jpg", description: "The extraordinary story of Stephen Hawking and his relationship with Jane Wilde." },
+{ title: "The Imitation Game", mood: "motivational", genre: "biography", year: 2014, poster: "https://image.tmdb.org/t/p/w500/zSqJ1qFq8NXFfi7JeIYMlZHm3JP.jpg", description: "Alan Turing decodes German intelligence messages for the Allied Forces during WWII." },
+{ title: "Rocketman", mood: "motivational", genre: "biography", year: 2019, poster: "https://image.tmdb.org/t/p/w500/dPI0ZZKf7AOeHpGCEKoYKNnNyGM.jpg", description: "A musical fantasy about the uncensored human story of Elton John's breakthrough years." },
+{ title: "I, Tonya", mood: "sad", genre: "biography", year: 2017, poster: "https://image.tmdb.org/t/p/w500/4fExBhkxVdBDJBSaGsmN6gVuVCH.jpg", description: "The controversial story of figure skater Tonya Harding and the attack on Nancy Kerrigan." },
+{ title: "Steve Jobs", mood: "motivational", genre: "biography", year: 2015, poster: "https://image.tmdb.org/t/p/w500/gEVpbktPWmwqcjEJIFiLKJSbdXz.jpg", description: "The man at the epicenter of the digital revolution, told backstage at three iconic product launches." },
 
-{
-title: "Parasite",
-mood: "thoughtful",
-genre: "drama",
-year: 2019,
-poster: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-description: "Class divide thriller."
-},
-
-{
-title: "Oppenheimer",
-mood: "thoughtful",
-genre: "drama",
-year: 2023,
-poster: "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg",
-description: "Atomic bomb story."
-},
-
-{
-title: "Joker",
-mood: "sad",
-genre: "drama",
-year: 2019,
-poster: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-description: "Descent into madness."
-},
-
-{
-title: "Fight Club",
-mood: "thoughtful",
-genre: "drama",
-year: 1999,
-poster: "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-description: "Underground fight club."
-},
-
-{
-title: "La La Land",
-mood: "happy",
-genre: "romance",
-year: 2016,
-poster: "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
-description: "Romantic musical."
-}
-
-/* ---- MORE MOVIES CONTINUE ---- */
-/* (Dataset intentionally large and extendable) */
+/* ==================== DOCUMENTARY ==================== */
+{ title: "Free Solo", mood: "motivational", genre: "documentary", year: 2018, poster: "https://image.tmdb.org/t/p/w500/gZGQrOiHNaSeB9hPKpUPbGBO1R4.jpg", description: "Alex Honnold attempts to become the first person to free solo climb Yosemite's El Capitan." },
+{ title: "13th", mood: "thoughtful", genre: "documentary", year: 2016, poster: "https://image.tmdb.org/t/p/w500/7mD5E2Oja7Bk5gOoIbmQGhBkGjW.jpg", description: "An in-depth look at the US prison system and its relationship to racial inequality in America." },
 
 ];
+
+/* ── Broken poster fallback ──
+   If TMDB returns a broken image for any card, swap in a
+   dark placeholder that matches the app's color scheme.    */
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.addEventListener('error', e => {
+    if (e.target.tagName !== 'IMG') return;
+    const label = encodeURIComponent(e.target.alt || 'No Poster');
+    e.target.src = `https://placehold.co/500x750/0f1218/c9a84c?text=${label}&font=playfair-display`;
+    e.target.style.objectFit = 'contain';
+    e.target.style.padding = '20px';
+    e.target.style.background = '#0f1218';
+  }, true);
+});
