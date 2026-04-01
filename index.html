@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Recommender</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">🎬 Movie Recommender</h1>
+
+<div class="search-container">
+<input type="text" id="search" placeholder="Search movies...">
+</div>
+
+<div class="filters">
+
+<button class="filter-btn" data-mood="all">All</button> <button class="filter-btn" data-mood="happy">Happy</button> <button class="filter-btn" data-mood="sad">Sad</button> <button class="filter-btn" data-mood="motivational">Motivational</button> <button class="filter-btn" data-mood="thoughtful">Thoughtful</button>
+
+</div>
+
+<div class="filters">
+
+<button class="genre-btn" data-genre="all">All Genres</button> <button class="genre-btn" data-genre="action">Action</button> <button class="genre-btn" data-genre="drama">Drama</button> <button class="genre-btn" data-genre="sci-fi">Sci-Fi</button> <button class="genre-btn" data-genre="romance">Romance</button>
+
+</div>
+
+<button id="randomBtn">🎲 Surprise Me</button>
+
+<div class="movies-container" id="moviesContainer"></div>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal" id="modal">
+<div class="modal-content" id="modalContent">
+<span class="close" id="closeModal">&times;</span>
+<div id="modalBody"></div>
+</div>
+</div>
+
+<script src="movies.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
