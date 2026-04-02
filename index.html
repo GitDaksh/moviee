@@ -52,6 +52,75 @@
     </div>
   </section>
 
+
+  <!-- ── AI RECOMMENDATION BANNER ── -->
+  <div class="ai-banner">
+    <div class="ai-banner-inner">
+      <div class="ai-banner-text">
+        <span class="ai-spark">✦</span>
+        <span>Not sure what to watch? Describe your mood and let AI pick for you.</span>
+      </div>
+      <button class="ai-banner-btn" id="openAiBtn">Ask AI <span class="ai-arrow">→</span></button>
+    </div>
+  </div>
+
+  <!-- ── AI PANEL ── -->
+  <div class="ai-overlay" id="aiOverlay">
+    <div class="ai-panel" id="aiPanel">
+
+      <div class="ai-panel-header">
+        <div class="ai-panel-logo">
+          <span class="ai-panel-icon">✦</span>
+          <span>CineMatch <em>AI</em></span>
+        </div>
+        <button class="ai-panel-close" id="closeAiBtn" aria-label="Close">✕</button>
+      </div>
+
+      <div class="ai-panel-body" id="aiPanelBody">
+
+        <!-- Idle state -->
+        <div class="ai-idle" id="aiIdle">
+          <h2 class="ai-idle-title">What are you in the mood for?</h2>
+          <p class="ai-idle-sub">Describe a vibe, a feeling, a scene — anything. I'll find your film.</p>
+          <div class="ai-prompts">
+            <button class="ai-prompt-chip" data-prompt="Something that will make me cry but feel good afterwards">Something bittersweet</button>
+            <button class="ai-prompt-chip" data-prompt="An intense thriller that will keep me on the edge of my seat all night">Edge-of-seat thriller</button>
+            <button class="ai-prompt-chip" data-prompt="A film I can watch with friends that's fun and energetic">Fun with friends</button>
+            <button class="ai-prompt-chip" data-prompt="Something deeply thought-provoking that will stick with me for days">Mind-bending & deep</button>
+            <button class="ai-prompt-chip" data-prompt="I just want to feel motivated and inspired to chase my goals">Fire me up</button>
+            <button class="ai-prompt-chip" data-prompt="A beautiful love story, something romantic and emotional">Beautiful love story</button>
+          </div>
+        </div>
+
+        <!-- Chat thread -->
+        <div class="ai-thread" id="aiThread" hidden></div>
+
+        <!-- Recommendations output -->
+        <div class="ai-recs" id="aiRecs" hidden></div>
+
+      </div>
+
+      <div class="ai-panel-footer">
+        <div class="ai-input-wrap">
+          <textarea
+            id="aiInput"
+            class="ai-input"
+            placeholder="e.g. 'Something melancholic but beautiful, like a rainy Sunday film…'"
+            rows="1"
+            maxlength="400"
+          ></textarea>
+          <button class="ai-send-btn" id="aiSendBtn" aria-label="Send">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 8L14 2L10 8L14 14L2 8Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <p class="ai-disclaimer">Powered by Claude · Suggestions from our catalogue of 100+ films</p>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ── CONTROLS ── -->
   <section class="controls-section">
     <div class="controls-inner">
@@ -131,5 +200,6 @@
 
   <script src="movies.js"></script>
   <script src="script.js"></script>
+  <script src="ai.js"></script>
 </body>
 </html>
